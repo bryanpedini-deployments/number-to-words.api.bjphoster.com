@@ -4,6 +4,8 @@ services:
   web:
     container_name: ${CONTAINER_NAME}
     image: bitweb/number-to-words-api:${APP_VERSION}
+    expose:
+      - 80
     labels:
       - traefik.enable=true
       ### Section HTTP
